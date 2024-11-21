@@ -44,7 +44,7 @@ Em seguida, inicie o aplicativo com o comando abaixo:
 
 ## Demonstração
 
-![Preview](...)
+PRINTS DO CODIGO E TELAS NO ROTEIRO ABAIXO:
 
 ## Documentos 
 

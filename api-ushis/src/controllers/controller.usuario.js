@@ -14,10 +14,11 @@ async function Login(req, res) {
         res.status(200).json(usuario);
 }
 
-
 async function Inserir(req, res) {
+
     try {
         const { nome, email, senha, cep, cidade, uf, bairro, endereco, numero} = req.body;
+        
         const usuario = await serviceUsuario.Inserir(nome, email, senha, cep, cidade, uf, bairro, endereco, numero);
         usuario.token = jwt.CreateJWT(usuario.id_usuario);
         res.status(201).json(usuario);

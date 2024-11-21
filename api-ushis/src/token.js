@@ -17,7 +17,7 @@ function ValidateJWT(req, res, next){
     return res.status(401).send({error: "Token não informado"})
   }
 
-  const [aux, token] = authToken.split(" ")
+  const [aux, token] = authToken.split(" ");
 
   jwt.verify(token, secretToken, (err, decoded) =>{
     if(err){
@@ -27,8 +27,7 @@ function ValidateJWT(req, res, next){
     req.id_usuario = decoded.id_usuario;
 
     next(); 
-  } )
-  
+  } );
 }
 
 

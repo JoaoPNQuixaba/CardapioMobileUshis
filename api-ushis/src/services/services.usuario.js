@@ -1,10 +1,8 @@
-import repositoryUsuario from "../repositores/repositores.usuario.js";
+import repositoryUsuario from "../repositores/repositories.usuario.js";
 import bcrypt from 'bcrypt';
 import jwt from '../token.js';
 
 async function Inserir(nome, email, senha, cep, cidade, uf, bairro, endereco, numero) {
-    
-    
     
     const validarUsuario = await repositoryUsuario.ListarByEmail(email);
 
@@ -17,6 +15,14 @@ async function Inserir(nome, email, senha, cep, cidade, uf, bairro, endereco, nu
         bairro, endereco, numero);
 
     usuario.token = jwt.CreateJWT(usuario.id_usuario);
+    usuario.nome = nome;
+    usuario.email = email;
+    usuario.cep = cep;
+    usuario.cidade = cidade;
+    usuario.uf = uf;
+    usuario.bairro = bairro;
+    usuario.endereco = endereco;
+    usuario.numero = numero;
 
     return usuario;
 }
@@ -27,8 +33,8 @@ async function Login(email, senha) {
     if (usuario.length == 0)
         return [];
     else {
-        if (await bcrypt.compare(senha, usuario.senha)) {
-            delete usuario.senha;
+        if (await bcrypt.compare(senha, usuario.SENHA)) {
+            delete usuario.SENHA;
             usuario.token = jwt.CreateJWT(usuario.id_usuario);
 
             return usuario;

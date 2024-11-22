@@ -1,5 +1,9 @@
 # App Cardápio Ushis
 
+## CASO NÃO CONSIGA BAIXAR O CODIGO, ACESSAR PELO LINK ABAIXO:
+
+https://drive.google.com/file/d/16sq4a_kRozWO-mDIEew7h45oyLmLlW9j/view?usp=sharing
+
   [![React Native](https://img.shields.io/badge/React%20Native-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactnative.dev/)
   [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
   [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
